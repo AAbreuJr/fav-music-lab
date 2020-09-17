@@ -54,16 +54,14 @@ class EditSong extends Component {
                       <button
                           type="submit"
                           className="btn green"
-                          disabled={this.state.invalidForm}
-                      ><i className="material-icons left">edit</i>
+                          disabled={this.state.invalidForm}>
                           Update Song
                       </button>
                       <Link 
                           className="btn red"
                           to={{
                               pathname: '/songs'
-                          }}
-                      ><i className="material-icons left">undo</i>
+                          }}>
                       Cancel
                       </Link>                            
                   </form>

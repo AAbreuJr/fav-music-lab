@@ -43,7 +43,7 @@ render() {
                     </div>
                     <div className="row">
                         <div className="input-field col s12">
-                        <input name="releaseYear" id="release" type="text" className="active" value={this.state.formData.releaseDate} onChange={this.handleChange}/>
+                        <input name="releaseYear" id="release" type="text" className="active" value={this.state.formData.releaseYear} onChange={this.handleChange}/>
                         <label className="active" htmlFor="release">Release Year</label>
                         </div>
                     </div>
@@ -62,16 +62,14 @@ render() {
                     <button
                         type="submit"
                         className="btn green"
-                        disabled={this.state.invalidForm}
-                    ><i className="material-icons left">edit</i>
+                        disabled={this.state.invalidForm}>
                         Update Album
                     </button>
                     <Link 
                         className="btn red"
                         to={{
                             pathname: '/albums'
-                        }}
-                    ><i className="material-icons left">undo</i>
+                        }}>
                     Cancel
                     </Link>                            
                 </form>

@@ -75,11 +75,11 @@ class App extends Component {
   
   handleUpdateAlbum = async updatedAlbumData => {
     const updatedAlbum = await albumAPI.update(updatedAlbumData);
-    const newAlbumsArray = this.setState.albums.map(a => 
+    const newAlbumsArray = this.state.albums.map(a => 
       a._id === updatedAlbum._id ? updatedAlbum : a
       );
       this.setState(
-        {albums: newAlbumsArray}, 
+        { albums: newAlbumsArray }, 
         () => this.props.history.push('/albums')
       ) 
   }
