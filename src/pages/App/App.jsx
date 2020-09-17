@@ -9,8 +9,9 @@ import "./App.css";
 
 class App extends Component {
   state = {
-    user: authService.getUser(),
-  };
+    albums: [],
+    user: authService.getUser()
+  }
 
   handleLogout = () => {
     authService.logout();
