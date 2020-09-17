@@ -6,7 +6,7 @@ import AlbumCard from '../../components/AlbumCard/AlbumCard';
 const AlbumList = (props) => {
   return ( 
     <>
-      <div className='Album-list-grid'>
+      <div className='AlbumList-grid'>
         {props.albums.map(album =>
           <AlbumCard 
               key={album._id}

@@ -18,7 +18,6 @@ function AlbumCard({ user, album, handleDeleteAlbum }) {
                     <div>Release Year:  {album.releaseYear}</div>
                     <div>Artist: {album.artist.join(', ')}</div>
                     <div>Producer:  {album.producer}</div>
-                    <p>{album.description}</p>
                     {user && (user._id === album.addedBy._id) &&
                         <>
                             <button type="submit" className="btn red" onClick={() => handleDeleteAlbum(album._id)}>  
@@ -27,7 +26,7 @@ function AlbumCard({ user, album, handleDeleteAlbum }) {
                             <Link 
                                 className="btn yellow black-text"
                                 to={{
-                                    pathname: '/edit',
+                                    pathname: '/albums',
                                     state: {album}
                                 }}>
                                 Edit Album

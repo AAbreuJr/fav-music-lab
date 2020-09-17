@@ -151,7 +151,7 @@ class App extends Component {
             <AlbumList
               albums={this.state.albums}
               user={this.state.user}
-              handleDeleteMovie={this.handleDeleteAlbums}
+              handleDeleteAlbum={this.handleDeleteAlbum}
             />}
         />
 
