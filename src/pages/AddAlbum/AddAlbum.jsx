@@ -32,7 +32,7 @@ class AddAlbum extends Component {
     render() { 
         return ( 
             <>
-                <div className="AddAlbum">
+                <div className="AddAlbum" id="addAlbum">
                     <form className="col s12" ref={this.formRef} onSubmit={this.handleSubmit}>
                         <div className="row">
                             <div className="input-field col s12">
@@ -78,6 +78,7 @@ class AddAlbum extends Component {
                         </button>                           
                     </form>
                 </div>
+
             </>
          );
     }
