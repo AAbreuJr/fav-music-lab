@@ -67,8 +67,7 @@ class AddAlbum extends Component {
                         <button
                             type="submit"
                             className="btn red"
-                            disabled={this.state.invalidForm}
-                        ><i className="material-icons left">add</i>
+                            disabled={this.state.invalidForm}>
                             Add Album
                         </button>                           
                     </form>

@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const tvshowsCtrl = require('../controllers/songs');
+const songsCtrl = require('../controllers/songs');
 
 // Public Routes
 router.get('/', songsCtrl.index);
