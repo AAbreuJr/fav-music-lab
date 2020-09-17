@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import SongCard from '../../components/SongCard/SongCard'
-
 import './AddSong.css';
 
 class AddSong extends Component {
