@@ -13,7 +13,7 @@ function SongCard({ user, song, handleDeleteSong }) {
                 <p>{song.artist}</p>
             </div>
             <div className="card-reveal">
-                <span class="card-title grey-text text-darken-4">{song.name}<i class="material-icons right">close</i></span>
+                <span class="card-title grey-text text-darken-4">{song.name}<i class="material-icons right">X</i></span>
                 <h6>Added By:  {song.addedBy.name}</h6>
                 <h6>Artist: {song.artist}</h6>
                 <div>Release Year:  {song.releaseDate}</div>

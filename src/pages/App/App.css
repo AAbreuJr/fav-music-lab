@@ -127,7 +127,9 @@ input {
 
 #datMusic {
   margin-top: 0.75rem;
+  animation: flash;
 }
+
 
 @media (max-width: 1250px) {
   .page-name {
