@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import songCard from '../../components/songCard/songCard'
+import SongCard from '../../components/SongCard/SongCard'
 
 import './AddSong.css';
 
