@@ -13,6 +13,7 @@ function AlbumCard({ user, album, handleDeleteAlbum }) {
                     <p>{album.description}</p>
                 </div>
                 <div className="card-reveal">
+                <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">X</i></span>
                     <h6>Added By:  {album.addedBy.name}</h6>
                     <div>Genre:  {album.genre}</div>
                     <div>Release Year:  {album.releaseYear}</div>
