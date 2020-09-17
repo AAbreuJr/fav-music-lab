@@ -48,12 +48,12 @@ body {
 }
 .card {
   width: 480px;
-  background-color: rgb(230, 230, 230);
+  background-color: #7B63C1;
 }
 
 .card .card-reveal {
   width: 480px;
-  background-color: rgb(230, 230, 230);
+  background-color: #7B63C1;
 }
 
 .material-icons {
