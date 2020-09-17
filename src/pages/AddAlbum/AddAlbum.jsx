@@ -54,12 +54,6 @@ class AddAlbum extends Component {
                         </div>
                         <div className="row">
                             <div className="input-field col s12">
-                            <input name="runTime" id="runtime" type="text" className="active" value={this.state.formData.runTime} onChange={this.handleChange}/>
-                            <label htmlFor="runtime">Run-time (Min)</label>
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="input-field col s12">
                             <input name="genre" id="genre" type="text" className="active" value={this.state.formData.genre} onChange={this.handleChange}/>
                             <label htmlFor="genre">Genre</label>
                             </div>

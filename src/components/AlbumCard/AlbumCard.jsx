@@ -17,7 +17,7 @@ function AlbumCard({ user, album, handleDeleteAlbum }) {
                     <h6>Added By:  {album.addedBy.name}</h6>
                     <div>Genre:  {album.genre}</div>
                     <div>Release Year:  {album.releaseYear}</div>
-                    <div>Artist: {album.cast.join(', ')}</div>
+                    <div>Artist: {album.artist.join(', ')}</div>
                     <div>Producer:  {album.producer}</div>
                     <p>{album.description}</p>
                     {user && (user._id === album.addedBy._id) &&
