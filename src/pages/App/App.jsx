@@ -96,8 +96,9 @@ class App extends Component {
   }
 
   async componentDidMount() {
-    const albums =await albumAPI.getAll()
-    this.setState({albums})
+    const albums = await albumAPI.getAll();
+    const songs = await songAPI.getAll();
+    this.setState({ albums, songs })
   }
 
   render() {
