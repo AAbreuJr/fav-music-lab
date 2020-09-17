@@ -7,6 +7,8 @@ import authService from "../../services/authService";
 import Users from "../Users/Users";
 import "./App.css";
 import * as albumAPI from '../../services/albums-api'
+import * as songAPI from '../../services/songs-api'
+
 
 class App extends Component {
   state = {
@@ -22,6 +24,36 @@ class App extends Component {
   handleSignupOrLogin = () => {
     this.setState({ user: authService.getUser() });
   };
+
+  handleDeleteSong = async id => {
+    if (authService.getUser()) {
+      await songAPI.deleteOne(id);
+      this.setState(state => ({
+        songs: state.songs.filter(s => s._id !== id)
+      }), () => this.props.history.push('/songs'));
+    } else {
+      this.props.history.push('/login')
+    }
+  }
+
+  handleUpdateSong = async updatedSongData => {
+    const updatedSong = await songAPI.update(updatedSongData);
+    const newSongsArray = this.state.songs.map(s =>
+      s._id === updatedSong._id ? updatedSong : t
+    );
+    this.setState(
+      { songs: newSongsArray },
+      () => this.props.history.push('/songs')
+    );
+  }
+
+  handleAddSong = async newSongData => {
+    const newSong = await songAPI.create(newSongData);
+    newSong.addedBy = { name: this.state.user.name, _id: this.state.user._id }
+    this.setState(state => ({
+      songs: [...state.songs, newSong]
+    }), () => this.props.history.push('/songs'));
+  }
 
 
   handleAddAlbum = async newAlbumData => {
@@ -115,6 +147,16 @@ class App extends Component {
             />}
         />
 
+        <Route exact path='/songs/add' render={() =>
+          authService.getUser() ?
+            <AddSong
+              handleAddSong={this.handleAddSong}
+              user={this.state.user}
+            />
+            :
+            <Redirect to='/login' />
+        } />
+
         <Route
           exact path='/edit' render={({ location }) =>
             authService.getUser() ?
@@ -127,6 +169,24 @@ class App extends Component {
               <Redirect to='/login' />
           } />
         
+        <Route exact path='/songs' render={() =>
+          <SongList
+            songs={this.state.songs}
+            user={this.state.user}
+            handleDeleteSong={this.handleDeleteSong}
+          />
+        } />
+
+        <Route exact path='/editSong' render={({ location }) =>
+          authService.getUser() ?
+            <EditSong
+              handleUpdateSong={this.handleUpdateSong}
+              location={location}
+              user={this.state.user}
+            />
+            :
+            <Redirect to='/login' />
+        } />
 
         <Route
           exact
