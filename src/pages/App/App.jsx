@@ -1,13 +1,20 @@
 import React, { Component } from "react";
 import { Route, Redirect } from "react-router-dom";
+import "./App.css";
 import NavBar from "../../components/NavBar/NavBar";
 import Signup from "../Signup/Signup";
 import Login from "../Login/Login";
 import authService from "../../services/authService";
 import Users from "../Users/Users";
-import "./App.css";
+import Landing from '../Landing/Landing'
+import AddAlbum from '../AddAlbum/AddAlbum'
+import AlbumList from '../AlbumList/AlbumList';
 import * as albumAPI from '../../services/albums-api'
 import * as songAPI from '../../services/songs-api'
+import EditAlbum from '../EditAlbum/EditAlbum'
+import AddSong from '../AddSong/AddSong'
+import SongList from '../SongList/SongList';
+import EditSong from '../EditSong/EditSong';
 
 
 class App extends Component {
@@ -39,7 +46,7 @@ class App extends Component {
   handleUpdateSong = async updatedSongData => {
     const updatedSong = await songAPI.update(updatedSongData);
     const newSongsArray = this.state.songs.map(s =>
-      s._id === updatedSong._id ? updatedSong : t
+      s._id === updatedSong._id ? updatedSong : s
     );
     this.setState(
       { songs: newSongsArray },
