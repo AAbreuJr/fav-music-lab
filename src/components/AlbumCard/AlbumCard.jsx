@@ -26,7 +26,7 @@ function AlbumCard({ user, album, handleDeleteAlbum }) {
                             <Link 
                                 className="btn yellow black-text"
                                 to={{
-                                    pathname: '/albums',
+                                    pathname: '/edit',
                                     state: {album}
                                 }}>
                                 Edit Album
