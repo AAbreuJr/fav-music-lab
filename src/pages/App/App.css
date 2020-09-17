@@ -49,16 +49,18 @@ body {
 }
 .card {
   width: 480px;
+  transition: 0.3s;
   background-color: #7B63C1;
 }
 
 .card .card-reveal {
   width: 480px;
+  transition: 0.3s;
   background-color: gold;
 }
 
 .card:hover {
-  background-color: gold
+  background-color: gold;
 }
 
 .material-icons {
