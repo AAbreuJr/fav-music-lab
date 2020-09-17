@@ -137,8 +137,7 @@ class App extends Component {
         />
         
         <Route
-          exact path='/albums/add'
-          render={() =>
+          exact path='/albums/add' render={() =>
             authService.getUser() ?
               <AddAlbum
                 handleAddAlbum={this.handleAddAlbum}
@@ -147,7 +146,6 @@ class App extends Component {
               :
               <Redirect to='/login' />
           } />
-
         <Route
           exact path="/albums" render={() =>
             <AlbumList

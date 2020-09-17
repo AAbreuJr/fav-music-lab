@@ -9,7 +9,6 @@ class AddAlbum extends Component {
             artist: [],
             producer: '',
             releaseYear: '',
-            runtime: '',
             genre: '',
             image: '',
         }
@@ -29,6 +28,7 @@ class AddAlbum extends Component {
      }
 
     formRef = React.createRef()
+    
     render() { 
         return ( 
             <>

@@ -5,7 +5,7 @@ const Schema = mongoose.Schema
 const albumSchema = new Schema ({
     name: {type: String, 
            required: true},
-    artist: {type: String, 
+    artist: {type: [String], 
               required: true
             },
     releaseYear: {type: String},
