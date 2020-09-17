@@ -10,7 +10,6 @@ const albumSchema = new Schema ({
             },
     releaseYear: {type: String},
     producer: {type: String},
-    runTime: {type: Number},
     genre: {type: String},
     image: {type: String},
     addedBy: {type: Schema.Types.ObjectId, ref: 'User'},
