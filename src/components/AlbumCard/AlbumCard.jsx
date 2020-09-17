@@ -22,7 +22,7 @@ function MovieCard({ user, album, handleDeleteAlbum }) {
                     <p>{movie.description}</p>
                     {user && (user._id === album.addedBy._id) &&
                         <>
-                            <button type="submit" className="btn red" onClick={() => handleDeleteMovie(album._id)}>
+                            <button type="submit" className="btn red" onClick={() => handleDeleteAlbum(album._id)}>
                           <i className="material-icons left">delete</i>    
                                 Delete Album
                             </button>
@@ -30,7 +30,7 @@ function MovieCard({ user, album, handleDeleteAlbum }) {
                                 className="btn yellow black-text"
                                 to={{
                                     pathname: '/edit',
-                                    state: {movie}
+                                    state: {album}
                                 }}
                             ><i className="material-icons left">build</i>
                                 Edit Album
