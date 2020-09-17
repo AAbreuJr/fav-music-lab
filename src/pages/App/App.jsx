@@ -21,6 +21,7 @@ import EditSong from '../EditSong/EditSong';
 class App extends Component {
   state = {
     albums: [],
+    songs: [],
     user: authService.getUser()
   }
 
