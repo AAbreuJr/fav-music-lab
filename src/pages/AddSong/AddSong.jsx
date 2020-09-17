@@ -33,27 +33,26 @@ class AddSong extends Component {
                     <form className="col s12" ref={this.formRef} onSubmit={this.handleSubmit}>
                         <div className="row">
                             <div className="input-field col s12">
-                            <input name="title" id="title" type="text" className="active" value={this.state.formData.name} onChange={this.handleChange} required />
-                            <label htmlFor="title">Song Title</label>
+                            <input name="name" id="name" type="text" className="active" value={this.state.formData.name} onChange={this.handleChange} required />
+                            <label htmlFor="name">Song Name</label>
                             </div>
                         </div>
                         <div className="row">
                             <div className="input-field col s12">
-                            <input name="artist" id="artist" type="text" className="active" value={this.state.formData.cast} onChange={this.handleChange} required/>
+                            <input name="artist" id="artist" type="text" className="active" value={this.state.formData.artist} onChange={this.handleChange} required/>
                             <label htmlFor="artist">Artist</label>
                             </div>
                         </div>
                         <div className="row">
                             <div className="input-field col s12">
                             <input name="releaseDate" id="release" type="text" className="active" value={this.state.formData.releaseDate} onChange={this.handleChange}/>
-                            <label htmlFor="release">Release Year</label>
+                            <label htmlFor="release">Release Date</label>
                             </div>
                         </div>
                         <button
                             type="submit"
                             className="btn red"
-                            disabled={this.state.invalidForm}
-                        ><i className="material-icons left">add</i>
+                            disabled={this.state.invalidForm}>
                             Add Song
                         </button>                           
                     </form>

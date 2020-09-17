@@ -9,18 +9,17 @@ function SongCard({ user, song, handleDeleteSong }) {
                 <img alt="tvshow" className="activator" src={song.image ? song.image : "https://www.cebodtelecom.com/wp-content/uploads/2014/09/related_post_no_available_image.png"} onClick={()=> {}}/>
             </div>
             <div className="card-content">
-                <span className="card-title activator grey-text text-darken-4">{song.name}<i className="material-icons right">more_vert</i></span>
+                <span className="card-title activator grey-text text-darken-4">{song.name}</span>
                 <p>{song.artist}</p>
             </div>
             <div className="card-reveal">
-                <span className="card-title grey-text text-darken-4">{song.name}<i className="material-icons right">close</i></span>
+                <span className="card-title grey-text text-darken-4">{song.name}</span>
                 <h6>Added By:  {song.addedBy.name}</h6>
                 <h6>Artist: {song.artist}</h6>
                 <div>Release Year:  {song.releaseDate}</div>
                 {user && (user._id === song.addedBy._id) &&
                     <>
-                        <button type="submit" className="btn red" onClick={() => handleDeleteSong(song._id)}>
-                        <i className="material-icons left">delete</i>    
+                        <button type="submit" className="btn red" onClick={() => handleDeleteSong(song._id)}>  
                             Delete Song
                         </button>
                         <Link 
@@ -28,8 +27,7 @@ function SongCard({ user, song, handleDeleteSong }) {
                             to={{
                                 pathname: '/editSong',
                                 state: {song}
-                            }}
-                        ><i className="material-icons left">build</i>
+                            }}>
                             Edit Song
                         </Link>
                     </>
