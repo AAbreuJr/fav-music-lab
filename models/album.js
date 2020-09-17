@@ -8,6 +8,7 @@ const albumSchema = new Schema ({
     artist: {type: String, 
               required: true
             },
+    releaseYear: {type: String}
     producer: {type: String},
     runTime: {type: Number},
     genre: {type: String},

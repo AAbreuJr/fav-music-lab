@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const songSchema = new Schema({
-    title: {
+    name: {
         type: String,
         required: true
     },
@@ -12,6 +12,9 @@ const songSchema = new Schema({
     }, 
     releaseDate: {
         type: Number
+    },
+    image: {
+        type: String
     },
     addedBy: { type: Schema.Types.ObjectId, ref: 'User'},
 }, { timestamps: true })
