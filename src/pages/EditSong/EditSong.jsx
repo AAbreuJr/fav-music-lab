@@ -35,7 +35,7 @@ class EditSong extends Component {
                       </div>
                       <div className="row">
                           <div className="input-field col s6">
-                          <input name="artist" id="artist" type="text" className="active" value={this.state.formData.cast.join(', ')} onChange={this.handleChange} required/>
+                          <input name="artist" id="artist" type="text" className="active" value={this.state.formData.artist.join(', ')} onChange={this.handleChange} required/>
                           <label className="active" htmlFor="cast">Artist (Separate with commas)</label>
                           </div>
                       </div>
