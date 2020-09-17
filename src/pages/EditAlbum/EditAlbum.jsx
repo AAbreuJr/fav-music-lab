@@ -37,14 +37,8 @@ render() {
                     </div>
                     <div className="row">
                         <div className="input-field col s12">
-                        <input name="artist" id="artist" type="text" className="active" value={this.state.formData.cast.join(', ')} onChange={this.handleChange} required/>
+                        <input name="artist" id="artist" type="text" className="active" value={this.state.formData.artist.join(', ')} onChange={this.handleChange} required/>
                         <label className="active" htmlFor="artist">Artist (Separate with commas)</label>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="input-field col s12">
-                        <input name="description" id="description" type="text" className="active" value={this.state.formData.description} onChange={this.handleChange}/>
-                        <label className="active" htmlFor="description">Album</label>
                         </div>
                     </div>
                     <div className="row">
