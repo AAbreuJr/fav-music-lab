@@ -57,6 +57,10 @@ body {
   background-color: #7B63C1;
 }
 
+.card:hover {
+  background-color: gold
+}
+
 .material-icons {
   font-family: "Material Icons";
   font-weight: normal;
