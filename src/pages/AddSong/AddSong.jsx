@@ -49,6 +49,12 @@ class AddSong extends Component {
                             <label htmlFor="release">Release Date</label>
                             </div>
                         </div>
+                        <div className="row">
+                            <div className="input-field col s12">
+                            <input name="image" id="imageURL" type="text" className="active" value={this.state.formData.image} onChange={this.handleChange}/>
+                            <label htmlFor="imageURL">Image URL</label>
+                            </div>
+                        </div>
                         <button
                             type="submit"
                             className="btn red"
