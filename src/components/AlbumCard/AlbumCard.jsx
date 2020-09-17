@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function MovieCard({ user, album, handleDeleteAlbum }) {
+function AlbumCard({ user, album, handleDeleteAlbum }) {
     return (
         <>
             <div className="card">
@@ -19,7 +19,7 @@ function MovieCard({ user, album, handleDeleteAlbum }) {
                     <div>Release Year:  {album.releaseYear}</div>
                     <div>Artist: {album.cast.join(', ')}</div>
                     <div>Producer:  {album.producer}</div>
-                    <p>{movie.description}</p>
+                    <p>{album.description}</p>
                     {user && (user._id === album.addedBy._id) &&
                         <>
                             <button type="submit" className="btn red" onClick={() => handleDeleteAlbum(album._id)}>

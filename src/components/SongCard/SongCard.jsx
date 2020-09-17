@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function TVShowCard({ user, song, handleDeleteSong }) {
+function SongCard({ user, song, handleDeleteSong }) {
     return(
         <>
         <div className=" card">
@@ -16,7 +16,7 @@ function TVShowCard({ user, song, handleDeleteSong }) {
                 <span className="card-title grey-text text-darken-4">{song.name}<i className="material-icons right">close</i></span>
                 <h6>Added By:  {song.addedBy.name}</h6>
                 <h6>Artist: {song.artist}</h6>
-                <div>Release Year:  {tvshow.releaseDate}</div>
+                <div>Release Year:  {song.releaseDate}</div>
                 {user && (user._id === song.addedBy._id) &&
                     <>
                         <button type="submit" className="btn red" onClick={() => handleDeleteSong(song._id)}>
@@ -40,4 +40,4 @@ function TVShowCard({ user, song, handleDeleteSong }) {
     ) 
 }
 
-export default Song;
+export default SongCard;
