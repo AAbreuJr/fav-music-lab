@@ -44,7 +44,7 @@ body {
   width: 100%;
 }
 .nav-wrapper {
-  background-color: rgba(255, 0, 0, 0.692);
+  background-color: #494453;
 }
 .card {
   width: 480px;
@@ -122,6 +122,10 @@ input {
 
 .page-name {
   margin-left: 100px;
+}
+
+#datMusic {
+  margin-top: 0.75rem;
 }
 
 @media (max-width: 1250px) {

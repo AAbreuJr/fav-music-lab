@@ -6,7 +6,7 @@ const NavBar = ({ user, handleLogout }) => {
       {user ?
       <nav>
         <div className="nav-wrapper">
-          <a className=" left" href="/"><img src="https://fontmeme.com/permalink/200917/799698dbca007637a1a64da2ff23e26a.png" height='40' alt="music" border="0"/></a>
+          <a className=" left" id="datMusic" href="/"><img src="https://fontmeme.com/permalink/200917/0f9ab0c238a884e7b28670669827382b.png" height='40' alt="music" border="0"/></a>
           <ul id="nav-mobile" className="right">
             <li><a href="/" className="nav-link">Welcome, {user.name}</a></li>
             <li><a className="nav-link-a" href="/albums">All Albums</a></li>
@@ -20,7 +20,7 @@ const NavBar = ({ user, handleLogout }) => {
     :
       <nav>
         <div className="nav-wrapper">
-          <a className=" left" href="/"><img src="https://fontmeme.com/permalink/200705/e2371cf438042048aa22fb9341eadbba.png" height='66' alt="netflix-font" border="0"/></a>
+          <a className=" left" id="datMusic" href="/"><img src="https://fontmeme.com/permalink/200917/0f9ab0c238a884e7b28670669827382b.png" height='40' alt="music" border="0"/></a>
           <ul id="nav-mobile" className="right">
             <li><a className="nav-link" href="/albums">All Albums</a></li>
             <li><a className="nav-link" href="/songs">All Songs</a></li>
