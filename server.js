@@ -3,6 +3,7 @@ const app = express();
 const path = require('path');
 const favicon = require('serve-favicon');
 const logger = require('morgan');
+const albumsRouter = require('./routes/albums')
 
 require('dotenv').config();
 require('./config/database');
@@ -22,6 +23,7 @@ app.use(express.static(path.join(__dirname, 'build')));
 
 app.use('/api/auth', authRouter);
 app.use('/api/users', userRouter);
+app.use('/api/albums', albumsRouter);
 
 app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
