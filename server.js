@@ -3,16 +3,14 @@ const app = express();
 const path = require('path');
 const favicon = require('serve-favicon');
 const logger = require('morgan');
-const albumsRouter = require('./routes/albums')
 
 require('dotenv').config();
 require('./config/database');
 
-const userRouter = require('./routes/users');
 const authRouter = require('./routes/auth');
+const albumsRouter = require('./routes/albums')
 
 const cors = require('cors')
-
 
 app.use(cors());
 app.use(logger('dev'));
@@ -22,7 +20,6 @@ app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')));
 app.use(express.static(path.join(__dirname, 'build')));
 
 app.use('/api/auth', authRouter);
-app.use('/api/users', userRouter);
 app.use('/api/albums', albumsRouter);
 
 app.get('/*', function(req, res) {
